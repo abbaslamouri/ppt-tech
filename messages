@@ -1,0 +1,424 @@
+{
+  "nav": {
+    "home": "home",
+    "fixtures": [
+      "quadz",
+      "propz",
+      "slimz"
+    ],
+    "accessories": [
+      "controls",
+      "cords"
+    ],
+    "contact": "contact us",
+    "about": "about us"
+  },
+  "locales": {
+    "en": "English",
+    "es": "Spanish"
+  },
+  "footer": {
+    "warranty": "Warranty",
+    "privacy": "Privacy policy"
+  },
+  "homePage": {
+    "hero": {
+      "headline": "PPF Tech",
+      "title": "Global lighting and horticultural professionals delivering:",
+      "list": {
+        "line1": "Application-specific grow light solutions",
+        "line2": "Cross-compatible CMH and LED fixture designs",
+        "line3": "Lowest total cost of ownership",
+        "line4": "Exceptional service"
+      },
+      "actions": {
+        "products": "Our products",
+        "services": "Our services"
+      }
+    },
+    "expertise": {
+      "title": "Our expertise",
+      "description": "With a over sixty years of collective horticultural lighting experience, PPF Tech is gaining a strong global reputation. We strive to design, manufacture and distribute the world's best differentiated lighting and control systems, optimized for plant growth",
+      "cards": {
+        "card1": {
+          "title": "Leading Technology",
+          "description": "We specialize in horticultural LED light control solutions that deliver the highest intensity (PPF per watt) while providing industry-leading color rendering and optimized spectral output from near UV to Far Red.",
+          "image": "Leading-Technology.png"
+        },
+        "card2": {
+          "title": "Design Focus",
+          "description": "PPF Tech lighting systems are designed by expert, hands-on engineers. We focus on optimal performance, ease of installation and lowest total cost of ownership.",
+          "image": "Design-Focus.png"
+        },
+        "card3": {
+          "title": "Application Based",
+          "description": "PPF Tech optimizes horticultural lighting applications by first defining key site attributes and specifications including building type/layout, plant DLI, spectral requirements and control demands.",
+          "image": "Application-Based.png"
+        }
+      }
+    },
+    "products": {
+      "title": "Our products",
+      "description": "PPF Tech lighting systems are designed to provide optimal performance, lowest total cost of ownership and ease of use",
+      "list": [
+        "Best-in-class efficiency µmol/m2/sec per Watt",
+        "Proprietary spectrum",
+        "Highest quality components",
+        [
+          "Osram, Samsung and proprietary chips",
+          "Insulated, watertight electrical and control connections",
+          "Anodized aluminum housings"
+        ],
+        "Universal designs that are compatible with numerous product platforms",
+        "Fixture-to-fixture power and control linkage",
+        "Control options and cross-compatibility with other control systems",
+        "DesignLights Consortium (DLC) listings"
+      ]
+    },
+    "services": {
+      "title": "Our services",
+      "description": "PPF-Tech offers a compliment of professional services including",
+      "list": [
+        "Complimentary lighting audits",
+        "Complimentary lighting designs",
+        "Lighting products tailored by application",
+        "Lighting maintenance services"
+      ]
+    }
+  },
+  "COMMENT_1": "Quadz",
+  "quadz": {
+    "title": "QUADZ",
+    "subTitle": "Indoor grid or racked",
+    "list": [
+      "Maximized µmol per watt",
+      "Optimized spectrum",
+      "Power eco-link",
+      "Control eco-link",
+      "Wide, uniform light distribution",
+      "Strong light penetration",
+      "5 year warranty"
+    ],
+    "table": [
+      {
+        "model": "HG940 PRO FS3",
+        "Input(W)": "940",
+        "PPF(umol/m2/s)": "2,570",
+        "Spectrum": "Full 4K",
+        "Bars": "8",
+        "Dimming": "0-10V",
+        "pdf": "PPF-Tech-HG940-PRO-FS3-Specifications_R3.0.pdf"
+      },
+      {
+        "model": "HG660 PRO FS3",
+        "Input(W)": "660",
+        "PPF(umol/m2/s)": "1750",
+        "Spectrum": "Full 4K",
+        "Bars": "8",
+        "Dimming": "0-10V",
+        "pdf": "PPF-Tech-HG660-PRO-FS3-Specifications_R5.0.pdf"
+      },
+      {
+        "model": "HG340 PRO FS1",
+        "Input(W)": "340",
+        "PPF(umol/m2/s)": "885",
+        "Spectrum": "Full 4K",
+        "Bars": "6",
+        "Dimming": "0-10V",
+        "pdf": "PPF-Tech-HG340-PRO-FS1-Specifications_R2.0.pdf"
+      }
+    ]
+  },
+  "COMMENT_2": "Propz",
+  "propz": {
+    "title": "PROPZ",
+    "subTitle": "Propagation",
+    "list": [
+      "Maximized µmol per watt",
+      "Tailored full vegetative spectrum",
+      "Power eco-link",
+      "Even distribution, optimized for propagation domes/trays",
+      "Quick install",
+      "5 year warranty"
+    ],
+    "table": [
+      {
+        "model": "CL24 PRO FS5",
+        "Input(W)/bar": "24",
+        "PPF(umol/m2/s)/bar": "65",
+        "Spectrum": "Clone 2.2K",
+        "Bars": "2",
+        "Dimming": "0-10V",
+        "pdf": "PPF-Tech-CL24-PRO-FS5-Specifications_R3.0.pdf"
+      }
+    ]
+  },
+  "COMMENT_3": "Slimz",
+  "slimz": {
+    "title": "SLIMZ",
+    "subTitle": "Greenhouse or indoor grid",
+    "list": [
+      "Maximized µmol per watt",
+      "Tailored spectrum",
+      "Power eco-link",
+      "Control eco-link",
+      "Slim design to minimize shadowing",
+      "Deep light penetration",
+      "Quick install",
+      "5 year warranty"
+    ],
+    "table": [
+      {
+        "model": "SL550 PRO FS1",
+        "Input(W)": "550",
+        "PPF(umol/m2/s)": "1500",
+        "Spectrum": "Full 3.2K",
+        "Bars": "1",
+        "Dimming": "0-10V",
+        "pdf": "PPF-Tech-SL550-Specifications_R8.0.pdf"
+      },
+      {
+        "model": "SL500 PRO RB1",
+        "Input(W)": "500",
+        "PPF(umol/m2/s)": "1600",
+        "Spectrum": "BR Supplemental",
+        "Bars": "1",
+        "Dimming": "0-10V",
+        "pdf": "PPF-Tech-SL500-Specifications_Rev2.0.pdf"
+      }
+    ]
+  },
+  "COMMENT_Controls": "Controls",
+  "controls": {
+    "title": "CONTROLS",
+    "subTitle": "Flexible control options",
+    "list": [
+      "Economic CD-3 control for ON/OFF/DIM/SUNRISE/SUNSET scheduling",
+      "Multi-feature CDX-1 control for additional sensing including CO2 and daylight harvesting",
+      "Simple interface with Trolmaster and other common control brands"
+    ],
+    "controlTableTitle": "Controls",
+    "controlTable": [
+      {
+        "model": "CD-3",
+        "list": [
+          "ON/OFF/DIM control device - manual interface",
+          "Controls up to 60 LED fixtures per channel"
+        ],
+        "pdf": "PPF-Tech-CD-3-Specifications_R2.0.pdf"
+      },
+      {
+        "model": "CDX-1",
+        "list": [
+          "ON/OFF/DIM light control. CO2, temperature, humidity sensing",
+          "Controls up to 60 LED fixtures per channel via RJ-M16 conversion cable"
+        ],
+        "pdf": "PPF-Tech-CDX-1-Specifications_R1.0.pdf"
+      }
+    ],
+    "accessoriesTableTitle": "Accessories",
+    "accessoriesTable": [
+      {
+        "model": "PARS-1",
+        "list": [
+          "Temperature sensor for CDX-1",
+          "Ongoing measurement of PPF"
+        ],
+        "pdf": "PPF-Tech-PARS-1_Specifications_R1.0.pdf"
+      },
+      {
+        "model": "CO2S-1",
+        "list": [
+          "CO2 sensor for CDX-1",
+          "Ongoing measurement of carbon dioxide"
+        ],
+        "pdf": "PPF-Tech-CO2S-1_Specifications_R1.0.pdf"
+      },
+      {
+        "model": "TS-1",
+        "list": [
+          "Temperature sensor for CD-3",
+          "Provides temperature sensing for a secondary zone"
+        ],
+        "pdf": "PPF-Tech-TS-1-Specifications_R1.0.pdf"
+      }
+    ]
+  },
+  "COMMENT_Cords": "Power Cords",
+  "cords": {
+    "title": "CORDS",
+    "subTitle": "Plug and play cord options",
+    "list": [
+      "Power Eco-link for easy install",
+      "Control Eco-link to multiple fixtures",
+      "Eliminate power drops, control splitters",
+      "Simplify 0-10V dimming"
+    ],
+    "powerCordsTableTitle": "Power cords",
+    "powerCordsTable": [
+      {
+        "model": "PC-14G-6-120",
+        "description": "Power cord 6 ft (1.8m) with NEMA 5-15P 120V plug",
+        "application": "Fixture to 120V outlet",
+        "pdf": "PPF-Tech-Power-Cord-Specifications_R2.0.pdf"
+      },
+      {
+        "model": "PC-14G-6-220",
+        "description": "Power cord 6 ft (1.8m) with type I plug",
+        "application": "Fixture to 220V outlet (South America)",
+        "pdf": "PPF-Tech-Power-Cord-Specifications_R2.0.pdf"
+      },
+      {
+        "model": "PC-14G-6-230",
+        "description": "Power cord 6 ft (1.8m) with NEMA 5-15P 120V plug",
+        "application": "Power cord 6 ft (1.8m) with type E plug",
+        "pdf": "PPF-Tech-Power-Cord-Specifications_R2.0.pdf"
+      },
+      {
+        "model": "PC-14G-6-240",
+        "description": "Power cord 6 ft (1.8m) with NEMA 5-15P 120V plug",
+        "application": "Power cord 6 ft (1.8m) with NEMA 6-15P 240V plug",
+        "pdf": "PPF-Tech-Power-Cord-Specifications_R2.0.pdf"
+      },
+      {
+        "model": "PC-14G-6-277",
+        "description": "Power cord 6 ft (1.8m) with NEMA 5-15P 120V plug",
+        "application": "Power cord 6 ft (1.8m) with NEMA L7-15P-277V plug",
+        "pdf": "PPF-Tech-Power-Cord-Specifications_R2.0.pdf"
+      },
+      {
+        "model": "PCF-14G-6",
+        "description": "Power cord 6 ft (1.8m) with NEMA 5-15P 120V plug",
+        "application": "Power cord 6 ft (1.8m) extension, fixture to fixture with M19 plugs",
+        "pdf": "PPF-Tech-Power-Cord-Specifications_R2.0.pdf"
+      },
+      {
+        "model": "PCF-14G-10 ft",
+        "description": "Power cord 6 ft (1.8m) with NEMA 5-15P 120V plug",
+        "application": "Power cord 10 ft (3.0m) extension, fixture to fixture with M19 plugs",
+        "pdf": "PPF-Tech-Power-Cord-Specifications_R2.0.pdf"
+      },
+      {
+        "model": "PC-18G-6-240",
+        "description": "Power cord 6 ft (1.8m) with NEMA 5-15P 120V plug",
+        "application": "CL24 PRO FS5 power cord 6 ft (1.8m) with NEMA 6-15P 240V plug",
+        "pdf": ""
+      }
+    ],
+    "controlCordsTableTitle": "Control Cords",
+    "controlCordsTable": [
+      {
+        "model": "CC-5-1",
+        "description": "Control cord 5 ft (1.5m) extension, fixture to fixture with M16 plugs",
+        "application": "Control extension between fixture rows or columns",
+        "pdf": "PPF-Tech-Control-Cord-Specifications_R1.0.pdf"
+      },
+      {
+        "model": "CC-10-1",
+        "description": "Control cord 10 ft (3.0m) extension, fixture to fixture with M16 plugs",
+        "application": "Control extension between fixture rows or columns",
+        "pdf": "PPF-Tech-Control-Cord-Specifications_R1.0.pdf"
+      },
+      {
+        "model": "CC-SP-6-1",
+        "description": "Control cord splitter 6 ft (1.8m) with M16 plugs",
+        "application": "Splits control signal for additional runs of 60 fixtures per split",
+        "pdf": "PPF-Tech-Control-Cord-Specifications_R1.0.pdf"
+      },
+      {
+        "model": "CC-22-6-1",
+        "description": "Control cord 6 ft (1.8m) extension, fixture to fixture with M12 plugs",
+        "application": "Control extension between CL24 PRO FS5 fixtures",
+        "pdf": ""
+      },
+      {
+        "model": "RJ-M16",
+        "description": "RJ to M16 conversion cable",
+        "application": "Enables control devices with RJ output to interface with fixtures with M16 input",
+        "pdf": "PPF-Tech-RJ-M16-Specifications_R4.0.pdf"
+      }
+    ]
+  },
+  "COMMENT_Warranty": "Warranty",
+  "warranty": {
+    "title": "Warranty",
+    "section1": {
+      "title": "LED Product Limited Warranty",
+      "paragraph1": "PPF Tech will cover defects in LED light source materials and workmanship for a period of 3 years and, for products purchased on or after Jan 1, 2022, a limited warranty for an additional 2 years, beginning from the date of purchase. PPF Tech warrants that all LED grow lighting products are new and in best working condition. The determination of whether the product is defective shall be made by PPF Tech. PPF Tech products will not be considered defective under this warranty solely because a small number of separate LED components fail to operate when the number of such failed components is less than 10% of the total number of light-emitting components which are part of the product. A dated receipt or invoice is required for all warranty claims.",
+      "paragraph2": "In the fourth and fifth years of the warranty period, PPF Tech, at its sole discretion, may elect to replace defective fixtures with refurbished fixtures and shipping cost will be equally shared by the two parties.",
+      "paragraph3": "Beginning from the date of delivery for a period of 90 days, all LED grow lighting products will not be less than 15% below light output specifications (initial values tested at 240V before delivery) based on the total photon flux (μmol/s of 280-800nm radiation output). Furthermore, if the Product is found, by a certified independent third party integrating sphere measurement to be less than 15% below product specifications (initial values tested at 230V before the delivery), PPF Tech shall either replace, refund or add additional lighting (to make up for the light output deficit) at no charge."
+    },
+    "section2": {
+      "title": "Exclusions",
+      "paragraph1": "This limited warranty covers defects in manufacturing discovered while using the product as recommended by the manufacturer. The warranty does not cover loss or theft, nor does coverage extend to damage caused by negligence, misuse or abuse including the following:",
+      "list": [
+        "Mechanical shocks (dropped or physically damaged fixtures)",
+        "Unauthorized modification",
+        "Improper storage or operating conditions",
+        "Lightning or natural disasters",
+        "Voltage spikes in main power whereby 20% or more of the fixtures fail at the same time",
+        "Harmful pesticides, fungicides or cleaning chemicals inadvertently sprayed onto fixtures",
+        "Operation in environments where chemical foggers are used"
+      ],
+      "paragraph2": "This Limited Warranty excludes labor and equipment required to remove and/or reinstall original or replacement parts and may not be transferred or assigned by the purchaser."
+    },
+    "section3": {
+      "title": "Limits of liability",
+      "paragraph1": "Should the product(s) fail, your sole recourse shall be replacement of the defect parts or product(s), as described above. PPF Tech will not be held liable to you or any other party for any damages that result from the failure of this product(s)."
+    },
+    "section4": {
+      "title": "How to Obtain Service Under This Warranty",
+      "paragraph1": "All warranties should be handled through the original channel of purchase."
+    }
+  },
+  "COMMENT_Privacy": "Privacy policy",
+  "privacy": {
+    "title": "Privacy policy",
+    "section1": {
+      "title": "How long we retain your data?",
+      "paragraph1": "If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue.",
+      "paragraph2": "For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information."
+    },
+    "section2": {
+      "title": "Data",
+      "paragraph1": "If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes."
+    }
+  },
+  "COMMENT_Contact": "Contact",
+  "contact": {
+    "title": "Let's get in touch!",
+    "description": "We are here to serve. From energy audits and lighting designs to fixture specification and optimization, our lighting designers, engineers and service teams are here to deliver quality solutions with shortest return on investment. Let us know how we can help you!",
+    "formFields": {
+      "name": "Name",
+      "email": "Email",
+      "country": "Country",
+      "phone": "Phone number (optional)",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "submitBtn": "Submit",
+    "submitBtnMsgs": "Submitting"
+  },
+  "COMMENT_About": "About",
+  "about": {
+    "title": "Our passion drives us",
+    "section1": {
+      "title": "Our mission",
+      "paragraph1": "Established in 2020, PPF Tech’s passion revolves around plant growth lighting. We deliver innovative lighting solutions that fully optimize plant response within controlled commercial environments while delivering lowest total cost of ownership. Our focus includes:",
+      "list": [
+        "Innovative, universal designs across product platforms",
+        "Low-cost via streamlined operations and supply chain",
+        "High-quality manufacturing",
+        "Excellent customer service and support"
+      ]
+    },
+    "section2": {
+      "title": "Our team",
+      "paragraph1": "Our team is comprised of engineering, product management, sales and support. We have over 50 collective years of experience related to plant growth lighting technologies. PPF Tech partners with a select network of distributors, agents and retailers throughout the world."
+    },
+    "section3": {
+      "title": "Our commitment and values",
+      "paragraph1": "PPF Tech is thoroughly committed to customer satisfaction, honesty and integrity. We take pride in providing best-in-class solutions and back quantitative data with empirical testing. PPF Tech views every new project and new relationship as an opportunity to uphold our Mission Statement, learn from others and make continuous improvements to our products and services."
+    }
+  }
+}
