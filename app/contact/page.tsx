@@ -1,18 +1,27 @@
 'use client'
 
-import { RefreshCw } from 'lucide-react'
+import { CheckCheck, ChevronsUpDown, RefreshCw } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
+// import { useForm } from 'react-hook-form'
+// import { zodResolver } from '@hookform/resolvers/zod'
 import z from 'zod'
-import { useTranslations, useMessages } from 'next-intl'
-import countries from '../../../lib/countries.json'
+// import { useTranslations, useMessages } from 'next-intl'
+import countries from '@/lib/countries.json'
 import { Button } from '@/components/ui/button'
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+// import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+
+// import { Textarea } from '@/components/ui/textarea'
+// import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+// import { toast } from 'sonner'
+// import { sendMail } from '@/actions/sendMail'
+import { Resend } from 'resend'
+import { useFormState } from 'react-dom'
+import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { toast } from 'sonner'
+
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
+import { useState } from 'react'
 import { sendMail } from '@/actions/sendMail'
 
 export const formSchema = z.object({
@@ -51,34 +60,60 @@ export const formSchema = z.object({
 })
 type IContact = z.infer<typeof formSchema>
 
-const Contact = () => {
-  const t = useTranslations('contact')
-  const messages: any = useMessages()
+// const sendMail = async (data: any) => {
+//   const resend = new Resend(process.env.RESENE_API_KEY)
 
-  const form = useForm<IContact>({
-    defaultValues: {
-      // name: 'Abbas Lamouri',
-      // email: 'abbaslamouri@yrlus.com',
-      // country: 'United States',
-      // phone: '216-502-6378',
-      // subject: 'Test',
-      // message: 'You have a new message from PPF Tech',
-      name: '',
-      email: '',
-      country: '',
-      phone: '',
-      subject: '',
-      message: '',
-    },
-    resolver: zodResolver(formSchema),
-  })
+//   const html = `
+//     <h1>You have receibed an email from PPF Tech site</h1>
+//     <p>name: ${data.name}</p>
+//     <p>country: ${data.country}</p>
+//     <p>Phone: ${data.phone}</p>
+//     <p>Subject: ${data.subject}</p>
+//     <p>Message: ${data.message}</p>
+//     <p>Date: ${new Date()}</p>
+//     `
+//   const result = await resend.emails.send({
+//     from: 'YRL Consulting <support@yrl-tech.com>',
+//     to: data?.email,
+//     subject: 'Email message from PPF Tech ',
+//     html,
+//   })
+//   console.log('ERROR', result)
+//   if (result.error) return { status: 'fail' }
+//   return { status: 'success' }
+// }
+
+const Contact = () => {
+  const [state, formAction] = useFormState(sendMail, null)
+  const [open, setOpen] = useState(false)
+  const [countryName, setCountryName] = useState('')
+
+  // const t = useTranslations('contact')
+  // const messages: any = useMessages()
+
+  // const form = useForm<IContact>({
+  //   defaultValues: {
+  //     // name: 'Abbas Lamouri',
+  //     // email: 'abbaslamouri@yrlus.com',
+  //     // country: 'United States',
+  //     // phone: '216-502-6378',
+  //     // subject: 'Test',
+  //     // message: 'You have a new message from PPF Tech',
+  //     name: '',
+  //     email: '',
+  //     country: '',
+  //     phone: '',
+  //     subject: '',
+  //     message: '',
+  //   },
+  //   resolver: zodResolver(formSchema),
+  // })
 
   const onSubmit = async (data: IContact) => {
-    const result = (await sendMail(data)) as { status: string; message: string }
-
-    if (result?.status == 'fail')
-      form.setError('root', { message: 'We are not able to send your message.  Please try again later' })
-    if (result.status === 'success') toast.success('Your email was submitted successfuly.', { duration: 10000 })
+    // const result = (await sendMail(data)) as { status: string; message: string }
+    // if (result?.status == 'fail')
+    //   form.setError('root', { message: 'We are not able to send your message.  Please try again later' })
+    // if (result.status === 'success') toast.success('Your email was submitted successfuly.', { duration: 10000 })
   }
 
   return (
@@ -89,138 +124,78 @@ const Contact = () => {
       }}
     >
       <div className="mx-auto  space-y-6 sm:w-[650px]  ">
+        ppppp{JSON.stringify(countryName)}
         <div className="flex-col items-center space-y-2 text-center">
-          <h1 className="text-2xl font-bold">{messages?.contact?.title}</h1>
-          <p className="text-start">{messages?.contact?.description}</p>
+          {/* <h1 className="text-2xl font-bold">{messages?.contact?.title}</h1>
+          <p className="text-start">{messages?.contact?.description}</p> */}
         </div>
         {/* <div className="grid gap-6"> */}
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 ">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>
-                    {t('formFields.name')} <span className="text-red-500">*</span>
-                  </FormLabel>
-                  <FormControl>
-                    <Input placeholder={t('formFields.name')} {...field} />
-                  </FormControl>
-                  {/* <FormDescription>This is your public display name.</FormDescription> */}
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>
-                    {t('formFields.email')} <span className="text-red-500">*</span>
-                  </FormLabel>
-                  <FormControl>
-                    <Input placeholder={t('formFields.email')} {...field} />
-                  </FormControl>
-                  {/* <FormDescription>This is your public display name.</FormDescription> */}
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="country"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>
-                    {t('formFields.country')} <span className="text-red-500">*</span>
-                  </FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder={t('formFields.country')} />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      {countries.map((c: any, i: number) => (
-                        <SelectItem value={c.countryName} key={i}>
-                          {c.countryName}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  {/* <FormDescription>
-                      You can manage email addresses in your <Link href="/examples/forms">email settings</Link>.
-                    </FormDescription> */}
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel> {t('formFields.phone')}</FormLabel>
-                  <FormControl>
-                    <Input placeholder={t('formFields.phone')} {...field} />
-                  </FormControl>
-                  {/* <FormDescription>This is your public display name.</FormDescription> */}
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="subject"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>
-                    {' '}
-                    {t('formFields.subject')} <span className="text-red-500">*</span>
-                  </FormLabel>
-                  <FormControl>
-                    <Input placeholder={t('formFields.subject')} {...field} />
-                  </FormControl>
-                  {/* <FormDescription>This is your public display name.</FormDescription> */}
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>
-                    {t('formFields.message')} <span className="text-red-500">*</span>
-                  </FormLabel>
-                  <FormControl>
-                    <Textarea placeholder={t('formFields.message')} className="resize-none" rows={5} {...field} />
-                  </FormControl>
-                  {/* <FormDescription>
-                      You can <span>@mention</span> other users and organizations.
-                    </FormDescription> */}
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            {/* <Button type="submit">Submit</Button> */}
-            <Button type="submit" className="" disabled={form.formState.isSubmitting}>
-              <RefreshCw
-                className={cn({
-                  hidden: !form.formState.isSubmitting,
-                  'visible animate-spin': form.formState.isSubmitting,
-                })}
-              />
-              {form.formState.isSubmitting ? messages?.contact?.submitBtnMsgs + '...' : messages?.contact?.submitBtn}
-            </Button>
-          </form>
-        </Form>
-        {form?.formState?.errors?.root && (
+        {/* <Form action={formAction}> */}
+        <form onSubmit={formAction} className="space-y-4 ">
+          <Input type="hidden" id="country" name="country" defaultValue={countryName} />
+          <div className=" flex-1 space-y-2">
+            <Label htmlFor="name">Name</Label>
+            <Input type="text" id="name" name="name" defaultValue={'Abbas Lamouri'} />
+            <div className="text-destructive">
+              {/* {state?.status === 'error' ? state?.details?.name?._errors.join(', ') : ''} */}
+            </div>
+          </div>
+          <div className="flex-1 space-y-2">
+            <Label htmlFor="sku">Email</Label>
+            <Input type="text" id="skemailu" name="email" defaultValue={'abbaslamouri@yrlus.com'} />
+          </div>
+          <div className="flex-1 space-y-2">
+            <Label htmlFor="country">Country</Label>
+            <div className="border-red">
+              <Popover open={open} onOpenChange={setOpen}>
+                <PopoverTrigger asChild>
+                  <Button variant="outline" role="combobox" aria-expanded={open} className="w-full justify-between">
+                    {countryName
+                      ? countries?.find((country) => country?.countryName === countryName)?.countryName
+                      : 'Select Country...'}
+                    <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="border-orange w-full">
+                  <Command className="border-green w-full">
+                    <CommandInput placeholder="Search framework..." />
+                    <CommandList className="max-h-[200px] overflow-y-scroll border-red">
+                      <CommandEmpty>No Country found.</CommandEmpty>
+                      <CommandGroup>
+                        {countries.map((country) => (
+                          // <div key={country.countryName}>{country?.countryName}</div>
+                          <CommandItem
+                            className={cn('', countryName === country?.countryName ? 'bg-primary/10' : '')}
+                            key={country.countryName}
+                            value={country.countryName}
+                            onSelect={(currentValue) => {
+                              console.log('KKKKKK', currentValue)
+                              setCountryName(currentValue)
+                              setOpen(false)
+                            }}
+                          >
+                            <CheckCheck
+                              className={cn(
+                                'mr-2 h-4 w-4',
+                                countryName === country?.countryName ? 'opacity-100' : 'opacity-0'
+                              )}
+                            />
+                            {country.countryName}
+                          </CommandItem>
+                        ))}
+                      </CommandGroup>
+                    </CommandList>
+                  </Command>
+                </PopoverContent>
+              </Popover>
+            </div>
+          </div>
+          <Button type="submit">Submit</Button>
+        </form>
+        {/* </Form> */}
+        {/* {form?.formState?.errors?.root && (
           <p className="text-sm text-red-500 bg-red-200 p-2">{form?.formState?.errors?.root?.message}</p>
-        )}
+        )} */}
         {/* </div> */}
       </div>
     </div>
