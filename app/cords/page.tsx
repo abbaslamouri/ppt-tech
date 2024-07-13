@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Check, MoveRight } from 'lucide-react'
 import Link from 'next/link'
 import powerCordImage from '@/public/PPF-Tech-Power-Cord-grouping.webp'
-// import controlCordImage from '@/public/PPF-Tech-Control-Cord-grouping-500.webp'
+import controlCordImage from '@/public/PPF-Tech-Control-Cord-Grouping-500.webp'
 import headingImage from '@/public/Controls-Name-Color.png'
 
 import { Button } from '@/components/ui/button'
@@ -142,12 +142,12 @@ const Quadz = () => {
               alt="PPF Tech Logo Image"
               sizes="100%"
             />
-            {/* <Image
+            <Image
               className="w-auto object-contain h-[17.5rem] -translate-y-3 scale-[0.9]"
               src={controlCordImage}
               alt="PPF Tech Logo Image"
               sizes="100%"
-            /> */}
+            />
           </div>
         </div>
         {/* </div> */}
