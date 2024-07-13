@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import quadzImage from '@/public/PPF-Tech-QUADZ-HG660-Grouping-600.webp'
-import propzImage from '@/public/PPF-Tech-PROPZ-Grouping..webp'
+import barzImage from '@/public/BARZ-Grouping-image.png'
 import slimzImage from '@/public/PPF-Tech-SLIMZ-SL550-Grouping-600.webp'
 
 const Products = () => {
@@ -27,7 +27,7 @@ const Products = () => {
   }
 
   return (
-    <article className="py-16">
+    <article id="products" className="py-16">
       <div className="container space-y-8 ">
         <div className="space-y-4">
           <h2 className="text-3xl font-[600] text-center">{products?.title}</h2>
@@ -54,8 +54,8 @@ const Products = () => {
           <Link className="col-span-12 lg:col-span-4" href="/quadz">
             <Image className="h-32 w-full object-contain" src={quadzImage} alt="PPF Tech Logo Image" sizes="100%" />
           </Link>
-          <Link className="col-span-12 lg:col-span-4" href="/propz">
-            <Image className="h-32 w-full object-contain" src={propzImage} alt="PPF Tech Logo Image" sizes="100%" />
+          <Link className="col-span-12 lg:col-span-4" href="/barz">
+            <Image className="h-32 w-full object-contain" src={barzImage} alt="PPF Tech Logo Image" sizes="100%" />
           </Link>
           <Link className="col-span-12 lg:col-span-4" href="/slimz">
             <Image className="h-32 w-full object-contain" src={slimzImage} alt="PPF Tech Logo Image" sizes="100%" />

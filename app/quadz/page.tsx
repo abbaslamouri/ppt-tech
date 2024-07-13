@@ -34,7 +34,7 @@ const Quadz = () => {
         Spectrum: 'Full 4K',
         Bars: '8',
         Dimming: '0-10V',
-        pdf: 'PPF-Tech-HG940-PRO-FS3-Specifications_R3.0.pdf',
+        pdf: '/PPF-Tech-HG940-PRO-FS3-Specifications_R3.0.pdf',
       },
       {
         model: 'HG660 PRO FS3',
@@ -43,7 +43,7 @@ const Quadz = () => {
         Spectrum: 'Full 4K',
         Bars: '8',
         Dimming: '0-10V',
-        pdf: 'PPF-Tech-HG660-PRO-FS3-Specifications_R5.0.pdf',
+        pdf: '/PPF-Tech-HG660-PRO-FS3-Specifications_R5.0.pdf',
       },
       {
         model: 'HG340 PRO FS1',
@@ -52,7 +52,7 @@ const Quadz = () => {
         Spectrum: 'Full 4K',
         Bars: '6',
         Dimming: '0-10V',
-        pdf: 'PPF-Tech-HG340-PRO-FS1-Specifications_R2.0.pdf',
+        pdf: '/PPF-Tech-HG340-PRO-FS1-Specifications_R2.0.pdf',
       },
     ],
   }
@@ -124,11 +124,7 @@ const Quadz = () => {
             {quadz?.table?.map((item: any, i: number) => (
               <tr key={i}>
                 <td className="border border-gray-200 px-4 py-2">
-                  <Link
-                    className="text-promary-40 font-bold underline"
-                    href={`${process.env.NEXT_PUBLIC_URL}/${item.pdf}`}
-                    target="_blank"
-                  >
+                  <Link className="text-promary-40 font-bold underline" href={item.pdf} target="_blank">
                     {item.model}
                   </Link>
                 </td>

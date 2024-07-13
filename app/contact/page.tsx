@@ -4,7 +4,6 @@ import { CheckCheck, ChevronsUpDown, RefreshCw } from 'lucide-react'
 import { cn } from '@/lib/utils'
 // import { useForm } from 'react-hook-form'
 // import { zodResolver } from '@hookform/resolvers/zod'
-import z from 'zod'
 // import { useTranslations, useMessages } from 'next-intl'
 import countries from '@/lib/countries.json'
 import { Button } from '@/components/ui/button'
@@ -23,42 +22,7 @@ import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, Command
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { useState } from 'react'
 import { sendMail } from '@/actions/sendMail'
-
-export const formSchema = z.object({
-  name: z
-    .string({
-      required_error: 'Name is required',
-      invalid_type_error: 'Name must be a string',
-    })
-    .min(1, { message: 'Name is reqired' }),
-  email: z
-    .string({
-      required_error: 'Email is required',
-      invalid_type_error: 'Email must be a string',
-    })
-    .email({ message: 'Please enter a valid email' })
-    .min(1, { message: 'Email is reqired' }),
-  country: z
-    .string({
-      required_error: 'Country is required',
-      invalid_type_error: 'Country must be a string',
-    })
-    .min(1, { message: 'Country is reqired' }),
-  phone: z.string().optional(),
-  subject: z
-    .string({
-      required_error: 'Subject is required',
-      invalid_type_error: 'Subject must be a string',
-    })
-    .min(1, { message: 'Subject is reqired' }),
-  message: z
-    .string({
-      required_error: 'Message is required',
-      invalid_type_error: 'Message must be a string',
-    })
-    .min(1, { message: 'Message is reqired' }),
-})
-type IContact = z.infer<typeof formSchema>
+import { InspectorNotification } from 'inspector'
 
 // const sendMail = async (data: any) => {
 //   const resend = new Resend(process.env.RESENE_API_KEY)
@@ -109,12 +73,12 @@ const Contact = () => {
   //   resolver: zodResolver(formSchema),
   // })
 
-  const onSubmit = async (data: IContact) => {
-    // const result = (await sendMail(data)) as { status: string; message: string }
-    // if (result?.status == 'fail')
-    //   form.setError('root', { message: 'We are not able to send your message.  Please try again later' })
-    // if (result.status === 'success') toast.success('Your email was submitted successfuly.', { duration: 10000 })
-  }
+  // const onSubmit = async (data) => {
+  //   // const result = (await sendMail(data)) as { status: string; message: string }
+  //   // if (result?.status == 'fail')
+  //   //   form.setError('root', { message: 'We are not able to send your message.  Please try again later' })
+  //   // if (result.status === 'success') toast.success('Your email was submitted successfuly.', { duration: 10000 })
+  // }
 
   return (
     <div

@@ -60,7 +60,7 @@ const Quadz = () => {
 
   return (
     <div className="space-y-8">
-      <section className="container py-16  min-h-[400px] bg-gray-500 bg-blend-multiply bg-no-repeat bg-cover">
+      <section className="container py-16  min-h-[400px] bg-blend-multiply bg-no-repeat bg-cover">
         {/* <div className=" pb-sm-lg flex justify-between "> */}
         <div className="space-y-4">
           <div className="flex items-center gap-4">
@@ -77,10 +77,10 @@ const Quadz = () => {
               />
             </div>
             {/* <h1 className="text-3 font-bold  text-neutral-99">{controls?.title}</h1> */}
-            <p className="text-xl text-gray-100">{controls?.subTitle}</p>
+            <p className="text-xl ">{controls?.subTitle}</p>
           </div>
           {/* </div> */}
-          <ul className="text-gray-200 space-y-1">
+          <ul className="space-y-1">
             {controls?.list?.map((item: string, i: number) => (
               <li key={i}>{item}</li>
             ))}

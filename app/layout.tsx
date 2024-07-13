@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth" style={{ scrollBehavior: 'smooth' }}>
       <body className={cn(` min-h-screen ${inter.className}`)}>
         <AppHeader />
         <main className="min-h-[calc(100vh-var(--header-height)-var(--footer-height))]">{children}</main>

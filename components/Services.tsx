@@ -14,7 +14,7 @@ const Services = () => {
   }
 
   return (
-    <article className="py-16">
+    <article id="services" className="py-16">
       <div className="container space-y-8 ">
         <div className="grid grid-cols-12 gap-12 items-center ">
           <div className="col-span-12 lg:col-span-8 space-y-4">

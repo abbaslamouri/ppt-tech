@@ -1,17 +1,10 @@
 import Image from 'next/image'
-// import { useTranslations, useMessages } from 'next-intl'
 import { Check, MoveRight } from 'lucide-react'
 import Link from 'next/link'
 import heroImage from '@/public/PPF-Tech-SL550-Side-View-Transparent-600.webp'
 import headingImage from '@/public/Slimz-Name-Color.webp'
 
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-
 const Quadz = () => {
-  // const t = useTranslations('nav')
-  // const messages: any = useMessages()
-
   const slimz = {
     title: 'SLIMZ',
     subTitle: 'Greenhouse or indoor grid',
@@ -33,7 +26,7 @@ const Quadz = () => {
         Spectrum: 'Full 3.2K',
         Bars: '1',
         Dimming: '0-10V',
-        pdf: 'PPF-Tech-SL550-Specifications_R8.0.pdf',
+        pdf: '/PPF-Tech-SL550-Specifications_R8.0.pdf',
       },
       {
         model: 'SL500 PRO RB1',
@@ -42,7 +35,7 @@ const Quadz = () => {
         Spectrum: 'BR Supplemental',
         Bars: '1',
         Dimming: '0-10V',
-        pdf: 'PPF-Tech-SL500-Specifications_Rev2.0.pdf',
+        pdf: '/PPF-Tech-SL500-Specifications_Rev2.0.pdf',
       },
     ],
   }

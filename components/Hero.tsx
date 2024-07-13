@@ -49,17 +49,17 @@ const Hero = () => {
                 <div className="flex flex-wrap items-center gap-6">
                   {/* <li className=""> */}
                   <Button className="t" asChild>
-                    <Link className="flex items-center gap-2" href="/products">
+                    <Link className="flex items-center gap-2" href="#products">
                       <span> {hero?.actions?.products}</span>
-                      <MoveRight className="size-4" />
+                      {/* <MoveRight className="size-4" /> */}
                     </Link>
                   </Button>
                   {/* </li>
                   <li className=""> */}
                   <Button className="bg-Transparent text-white " asChild variant="outline">
-                    <Link className="flex items-center gap-2" href="/services">
+                    <Link className="flex items-center gap-2" href="#services">
                       <span> {hero?.actions?.services}</span>
-                      <MoveRight className="size-4" />
+                      {/* <MoveRight className="size-4" /> */}
                     </Link>
                   </Button>
                   {/* </li> */}
