@@ -16,7 +16,6 @@ import { useSearchParams } from 'next/navigation'
 
 const ContactPage = ({ searchParams }: any) => {
   const { pending } = useFormStatus()
-  // const searchParams = useSearchParams()
   console.log(searchParams)
   const [state, formAction] = useFormState(sendMail, null)
   const [open, setOpen] = useState(false)
@@ -60,7 +59,7 @@ const ContactPage = ({ searchParams }: any) => {
                 type="text"
                 id="name"
                 name="name"
-                defaultValue={'Abbas Lamouri'}
+                defaultValue={''}
               />
               <div className="text-destructive">
                 {state?.status === 'error' ? state?.error?.data?.name?._errors.join(', ') : ''}
@@ -73,7 +72,7 @@ const ContactPage = ({ searchParams }: any) => {
                 type="text"
                 id="email"
                 name="email"
-                defaultValue={'abbaslamouri@yrlus.com'}
+                defaultValue={''}
               />
               <div className="text-destructive">
                 {state?.status === 'error' ? state?.error?.data?.email?._errors.join(', ') : ''}
@@ -135,7 +134,7 @@ const ContactPage = ({ searchParams }: any) => {
                 type="text"
                 id="phone"
                 name="phone"
-                defaultValue={'216-502-6378'}
+                defaultValue={''}
               />
               <div className="text-destructive">
                 {state?.status === 'error' ? state?.error?.data?.phone?._errors.join(', ') : ''}
@@ -149,7 +148,7 @@ const ContactPage = ({ searchParams }: any) => {
               type="text"
               id="subject"
               name="subject"
-              defaultValue={'Test'}
+              defaultValue={''}
             />
             <div className="text-destructive">
               {state?.status === 'error' ? state?.error?.data?.subject?._errors.join(', ') : ''}
@@ -161,7 +160,6 @@ const ContactPage = ({ searchParams }: any) => {
               className={state?.status === 'error' && state?.error?.data?.message ? 'ring ring-red-500' : ''}
               id="message"
               name="message"
-              defaultValue={'lorem ipsum dolores'}
             />
             <div className="text-destructive">
               {state?.status === 'error' ? state?.error?.data?.message?._errors.join(', ') : ''}

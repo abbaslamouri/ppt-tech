@@ -25,7 +25,7 @@ export const sendMail = async (prevState: unknown, formData: FormData): Promise<
     }
 
   const html = `
-    <h1>You have a messagefrom PPF Tech</h1>
+    <h1>You have a message from PPF Tech</h1>
     <p>name: ${formData.get('name')}</p>
     <p>email: ${formData.get('email')}</p>
     <p>Country: ${formData.get('country')}</p>
