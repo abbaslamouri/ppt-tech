@@ -4,7 +4,7 @@ import Link from 'next/link'
 import heroImage from '@/public/PPF-Tech-SL550-Side-View-Transparent-600.webp'
 import headingImage from '@/public/Slimz-Name-Color.webp'
 
-const Quadz = () => {
+const SlimzPage = () => {
   const slimz = {
     title: 'SLIMZ',
     subTitle: 'Greenhouse or indoor grid',
@@ -115,4 +115,4 @@ const Quadz = () => {
   )
 }
 
-export default Quadz
+export default SlimzPage

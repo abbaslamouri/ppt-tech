@@ -1,19 +1,10 @@
 import Image from 'next/image'
-// import { useTranslations, useMessages } from 'next-intl'
-import { Check, MoveRight } from 'lucide-react'
 import Link from 'next/link'
 import powerCordImage from '@/public/PPF-Tech-Power-Cord-grouping.webp'
 import controlCordImage from '@/public/PPF-Tech-Control-Cord-Grouping-500.webp'
 import headingImage from '@/public/Controls-Name-Color.png'
 
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { spawn } from 'child_process'
-
-const Quadz = () => {
-  // const t = useTranslations('nav')
-  // const messages: any = useMessages()
-
+const CordsPage = () => {
   const cords = {
     title: 'CORDS',
     subTitle: 'Plug and play cord options',
@@ -112,7 +103,6 @@ const Quadz = () => {
   return (
     <div className="space-y-8">
       <section className="container py-16  min-h-[400px] bg-blend-multiply bg-no-repeat bg-cover">
-        {/* <div className=" pb-sm-lg flex justify-between "> */}
         <div className="space-y-4">
           <div className="flex items-center gap-4">
             <div className="relative w-[300px] h-[50px] ">
@@ -226,4 +216,4 @@ const Quadz = () => {
   )
 }
 
-export default Quadz
+export default CordsPage

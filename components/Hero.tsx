@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import heroImage from '@/public/PPF-Tech-HG660-FS3-Angle-Transparent-600.png'
 import Link from 'next/link'
-// import { Button } from './ui/button'
-import { Check, MoveRight } from 'lucide-react'
+import { Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const Hero = () => {
@@ -39,27 +38,20 @@ const Hero = () => {
                 <ul className="text-gray-200  space-y-2">
                   {Object.values(hero?.list)?.map((item: any, i: number) => (
                     <li className=" flex items-center gap-2" key={i}>
-                      {/* <div className="flex flex-wrap items-center gap-2"> */}
                       <Check className="size-4" />
                       {<span className="">{item} </span>}
-                      {/* </div> */}
                     </li>
                   ))}
                 </ul>
                 <div className="flex flex-wrap items-center gap-6">
-                  {/* <li className=""> */}
                   <Button className="t" asChild>
                     <Link className="flex items-center gap-2" href="#products">
                       <span> {hero?.actions?.products}</span>
-                      {/* <MoveRight className="size-4" /> */}
                     </Link>
                   </Button>
-                  {/* </li>
-                  <li className=""> */}
                   <Button className="bg-Transparent text-white " asChild variant="outline">
                     <Link className="flex items-center gap-2" href="#services">
                       <span> {hero?.actions?.services}</span>
-                      {/* <MoveRight className="size-4" /> */}
                     </Link>
                   </Button>
                   {/* </li> */}

@@ -1,19 +1,10 @@
 import Image from 'next/image'
-// import { useTranslations, useMessages } from 'next-intl'
-import { Check, MoveRight } from 'lucide-react'
 import Link from 'next/link'
 import cd3Image from '@/public/PPF-Tech-CD3-Grouping-600.webp'
 import cdx1Image from '@/public/PPF-Tech-CDX1-Grouping-600.webp'
 import headingImage from '@/public/Controls-Name-Color.png'
 
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { spawn } from 'child_process'
-
-const Quadz = () => {
-  // const t = useTranslations('nav')
-  // const messages: any = useMessages()
-
+const ControlsPage = () => {
   const controls = {
     title: 'CONTROLS',
     subTitle: 'Flexible control options',
@@ -61,7 +52,6 @@ const Quadz = () => {
   return (
     <div className="space-y-8">
       <section className="container py-16  min-h-[400px] bg-blend-multiply bg-no-repeat bg-cover">
-        {/* <div className=" pb-sm-lg flex justify-between "> */}
         <div className="space-y-4">
           <div className="flex items-center gap-4">
             <div className="relative w-[300px] h-[50px] ">
@@ -76,7 +66,6 @@ const Quadz = () => {
                 alt="PPF Tech Logo Image"
               />
             </div>
-            {/* <h1 className="text-3 font-bold  text-neutral-99">{controls?.title}</h1> */}
             <p className="text-xl ">{controls?.subTitle}</p>
           </div>
           {/* </div> */}
@@ -156,4 +145,4 @@ const Quadz = () => {
   )
 }
 
-export default Quadz
+export default ControlsPage

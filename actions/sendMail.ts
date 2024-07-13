@@ -1,26 +1,48 @@
 'use server'
 
+import { contactFormSchema, IServerResponse } from '@/types'
+import { redirect } from 'next/navigation'
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESENE_API_KEY)
 
-export const sendMail = async (data: any) => {
+/**
+ * Send mail
+ * @param formData
+ * @returns object
+ */
+export const sendMail = async (prevState: unknown, formData: FormData): Promise<IServerResponse<{}>> => {
+  console.log('FD', formData)
+  const parsed = contactFormSchema.safeParse(Object.fromEntries(formData.entries()))
+  console.log('Parsed', parsed)
+  if (parsed.success === false)
+    return {
+      status: 'error',
+      error: {
+        message: 'Please correct the errors below',
+        data: parsed?.error.format(),
+      },
+    }
+
   const html = `
-    <h1>You have receibed an email from PPF Tech site</h1>
-    <p>name: ${data.name}</p>
-    <p>country: ${data.country}</p>
-    <p>Phone: ${data.phone}</p>
-    <p>Subject: ${data.subject}</p>
-    <p>Message: ${data.message}</p>
-    <p>Date: ${new Date()}</p>
+    <h1>You have a messagefrom PPF Tech</h1>
+    <p>name: ${formData.get('name')}</p>
+    <p>email: ${formData.get('email')}</p>
+    <p>Country: ${formData.get('country')}</p>
+    <p>Phone number: ${formData.get('phone')}</p>
+    <p>Subject: ${formData.get('subject')}</p>
+    <p>Message: ${formData.get('message')}</p>
+    <p>Date: ${new Date().toLocaleDateString()}</p>
     `
-  const result = await resend.emails.send({
+  const { data, error } = await resend.emails.send({
     from: 'YRL Consulting <support@yrl-tech.com>',
-    to: data?.email,
+    to: 'abbaslamouri@yrlus.com',
     subject: 'Email message from PPF Tech ',
     html,
   })
-  console.log('ERROR', result)
-  if (result.error) return { status: 'fail' }
-  return { status: 'success' }
+
+  console.log(error)
+
+  if (error) redirect('/contact?emailSent=error')
+  redirect('/contact?emailSent=success')
 }

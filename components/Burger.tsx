@@ -3,13 +3,11 @@
 import { useState } from 'react'
 
 interface BurgerProps {
-  // burgerBtnState: boolean
   updateShowMobileNav: (burgerButtonState: boolean) => void
 }
 
 const Burger = ({ updateShowMobileNav }: BurgerProps) => {
   const [burgerBtnState, setBurgerBtnState] = useState(false)
-  // const buttonLabel = 'Show sidebar'
 
   return (
     <button

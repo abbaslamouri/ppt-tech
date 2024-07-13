@@ -1,9 +1,7 @@
 'use client'
 
-// import CustomLink from './CustomeLink'
 import { cn } from '@/lib/utils'
-import { ChevronDown, ChevronUp } from 'lucide-react'
-// import { useMessages } from 'next-intl'
+import { ChevronUp } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -46,10 +44,8 @@ const Navigation = ({
               <div
                 className={cn(
                   '  relative  text-xs lg:absolute [&>*]:overflow-visible left-0 top-full w-full   grid lg:grid-rows-[0] lg:[&>*]:overflow-hidden group-hover:grid-rows-1 transition-all duration-250 ease-in-out  lg:bg-gray-100 lg:pl-4'
-                  // { ' hidden': !showMobileNav, 'lg:visible': true }
                 )}
               >
-                {/* {JSON.stringify(navLink)} */}
                 <ul className="">
                   {navLink.children?.map((child, j: number) => (
                     <li className="px-4 py-2 " key={j}>

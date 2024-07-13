@@ -1,19 +1,9 @@
 import Image from 'next/image'
-// import { useTranslations, useMessages } from 'next-intl'
-import { Check, MoveRight } from 'lucide-react'
 import Link from 'next/link'
 import heroImage from '@/public/PPF-Tech-HG660-FS3-Angle-Transparent-600.png'
 import headingImage from '@/public/Quadz-Name-Color.png'
 
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { Span } from 'next/dist/trace'
-import { Separator } from '@/components/ui/separator'
-
-const Quadz = () => {
-  // const t = useTranslations('nav')
-  // const messages: any = useMessages()
-
+const QuadzPage = () => {
   const quadz = {
     title: 'QUADZ',
     subTitle: 'Indoor grid or racked',
@@ -57,11 +47,6 @@ const Quadz = () => {
     ],
   }
 
-  // className="  min-h-[400px] bg-gray-600 bg-blend-multiply "
-  // style={{
-  //   backgroundImage: `url("/PPF-Tech-HG660-Application-1200.jpg")`,
-  // }}
-
   return (
     <div className=" space-y-8">
       <section
@@ -85,7 +70,6 @@ const Quadz = () => {
                   alt="PPF Tech Logo Image"
                 />
               </div>
-              {/* <h1 className="text-3xl font-bold ">{quadz?.title}</h1> */}
               <p className="text-xl text-gray-100 ">{quadz?.subTitle}</p>
             </div>
             <ul className="text-gray-200 space-y-1">
@@ -181,4 +165,4 @@ const Quadz = () => {
   )
 }
 
-export default Quadz
+export default QuadzPage

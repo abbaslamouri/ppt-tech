@@ -1,17 +1,9 @@
 import Image from 'next/image'
-// import { useTranslations, useMessages } from 'next-intl'
-import { Check, MoveRight } from 'lucide-react'
 import Link from 'next/link'
 import heroImage from '@/public/CL24-PRO-FS3-PIC2.webp'
 import headingImage from '@/public/Barz-Name-Color.png'
 
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-
-const Quadz = () => {
-  // const t = useTranslations('nav')
-  // const messages: any = useMessages()
-
+const BarzPage = () => {
   const propz = {
     title: 'PROPZ',
     subTitle: 'Propagation',
@@ -68,7 +60,6 @@ const Quadz = () => {
                   alt="PPF Tech Logo Image"
                 />
               </div>
-              {/* <h1 className="text-3 font-bold  text-neutral-99">{propz?.title}</h1> */}
               <p className="text-3xl   text-gray-100">{propz?.subTitle}</p>
             </div>
             <ul className=" text-gray-200 space-y-1">
@@ -119,4 +110,4 @@ const Quadz = () => {
   )
 }
 
-export default Quadz
+export default BarzPage

@@ -2,7 +2,7 @@
 
 import Branding from './Branding'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { cn } from '@/lib/utils'
 import Burger from './Burger'
 import Navigation from './Navigation'
