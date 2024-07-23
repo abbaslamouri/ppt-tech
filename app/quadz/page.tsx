@@ -108,7 +108,13 @@ const QuadzPage = () => {
             {quadz?.table?.map((item: any, i: number) => (
               <tr key={i}>
                 <td className="border border-gray-200 px-4 py-2">
-                  <Link className="text-promary-40 font-bold underline" href={item.pdf} target="_blank">
+                  <Link
+                    className="text-promary-40 font-bold underline"
+                    href={item.pdf}
+                    locale={false}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
                     {item.model}
                   </Link>
                 </td>
