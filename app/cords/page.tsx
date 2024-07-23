@@ -140,7 +140,6 @@ const CordsPage = () => {
             />
           </div>
         </div>
-        {/* </div> */}
       </section>
 
       <section className="container pt-16 space-y-2">
