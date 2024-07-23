@@ -2,12 +2,20 @@
 
 import { useState } from 'react'
 
-interface BurgerProps {
-  updateShowMobileNav: (burgerButtonState: boolean) => void
-}
+// interface BurgerProps {
+//   updateShowMobileNav: (burgerButtonState: boolean) => void
+// }
 
-const Burger = ({ updateShowMobileNav }: BurgerProps) => {
-  const [burgerBtnState, setBurgerBtnState] = useState(false)
+const Burger = ({
+  burgerBtnState,
+  updateBurgerBtnState,
+}: // updateShowMobileNav,
+{
+  burgerBtnState: boolean
+  updateBurgerBtnState: (state: boolean) => void
+  // updateShowMobileNav: (state: boolean) => void
+}) => {
+  // const [burgerBtnState, setBurgerBtnState] = useState(false)
 
   return (
     <button
@@ -17,9 +25,9 @@ const Burger = ({ updateShowMobileNav }: BurgerProps) => {
       aria-haspopup="true"
       aria-label={burgerBtnState ? 'Show nav menu' : 'Hide nav menu'}
       onClick={() => {
-        setBurgerBtnState((prev) => !prev)
-        updateShowMobileNav(burgerBtnState)
-        console.log(burgerBtnState)
+        updateBurgerBtnState(!burgerBtnState)
+        // updateShowMobileNav(burgerBtnState)
+        // console.log(burgerBtnState)
       }}
     >
       <span

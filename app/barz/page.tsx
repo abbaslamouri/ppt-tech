@@ -4,8 +4,8 @@ import heroImage from '@/public/CL24-PRO-FS3-PIC2.webp'
 import headingImage from '@/public/Barz-Name-Color.png'
 
 const BarzPage = () => {
-  const propz = {
-    title: 'PROPZ',
+  const barz = {
+    title: 'BARZ',
     subTitle: 'Propagation',
     list: [
       'Maximized µmol per watt',
@@ -60,10 +60,10 @@ const BarzPage = () => {
                   alt="PPF Tech Logo Image"
                 />
               </div>
-              <p className="text-3xl   text-gray-100">{propz?.subTitle}</p>
+              <p className="text-3xl   text-gray-100">{barz?.subTitle}</p>
             </div>
             <ul className=" text-gray-200 space-y-1">
-              {propz?.list?.map((item: string, i: number) => (
+              {barz?.list?.map((item: string, i: number) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
@@ -75,10 +75,10 @@ const BarzPage = () => {
       </section>
 
       <section className="container py-16">
-        <table className="w-full hidden md:table border-collapse border shadow-md p-4 border-gray-200">
+        <table className="w-full hidden lg:table border-collapse border shadow-md p-4 border-gray-200">
           <thead className="bg-primary-20 text-primary-90">
             <tr>
-              {Object.keys(propz?.table[0])?.map(
+              {Object.keys(barz?.table[0])?.map(
                 (item: any, i: number) =>
                   item !== 'pdf' && (
                     <th className="border border-gray-200 px-4 py-2 bg-gray-950 text-gray-100" key={i}>
@@ -89,7 +89,7 @@ const BarzPage = () => {
             </tr>
           </thead>
           <tbody>
-            {propz?.table?.map((item: any, i: number) => (
+            {barz?.table?.map((item: any, i: number) => (
               <tr key={i}>
                 <td className="border border-gray-200 px-4 py-2">
                   <Link className="text-promary-40 font-bold underline" href={item.pdf} target="_blank">
@@ -105,6 +105,35 @@ const BarzPage = () => {
             ))}
           </tbody>
         </table>
+        <div className="lg:hidden">
+          {barz?.table?.map((item: any, i: number) => (
+            <div className="p-4 border border-gray-200 flow-3xs" key={i}>
+              <div className="">
+                <Link className="text-promary-40 font-bold underline" href={item.pdf} target="_blank">
+                  {item.model}
+                </Link>
+              </div>
+              <div>
+                <span className="font-[500]">Input</span>: {item['Input(W)/bar']} W
+              </div>
+              <div>
+                <span className="font-[500]">PPF</span>: {item['PPF(umol/m2/s)/bar']} umol/m<sup>2</sup>/s
+              </div>
+              <div>
+                {' '}
+                <span className="font-[500]">Spectrum</span>: {item['Spectrum']}
+              </div>
+              <div>
+                {' '}
+                <span className="font-[500]">Bars</span>: {item.Bars}
+              </div>
+              <div>
+                {' '}
+                <span className="font-[500]">Dimming</span>: {item.Dimming}
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   )

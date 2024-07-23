@@ -32,11 +32,18 @@ const AppHeader = () => {
   ]
 
   const [showMobileNav, setShowMobileNav] = useState<boolean>(true)
+  const [burgerBtnState, setBurgerBtnState] = useState(false)
 
-  const updateShowMobileNav = (burgerButtonState: boolean) => {
-    console.log('KKKKKK')
-    setShowMobileNav(burgerButtonState)
-    console.log(showMobileNav)
+  const updateShowMobileNav = (state: boolean) => {
+    setShowMobileNav(state)
+    setBurgerBtnState(false)
+    // console.log('SSSSS', showMobileNav)
+  }
+
+  const updateBurgerBtnState = (state: boolean) => {
+    setBurgerBtnState(state)
+    setShowMobileNav(!state)
+    // console.log('SSSSS', showMobileNav)
   }
 
   return (
@@ -47,10 +54,10 @@ const AppHeader = () => {
         <div className="flex justify-between ">
           <Branding />
           <div className={cn('hidden   flex-1 lg:flex justify-end', {})}>
-            <Navigation navLinks={navLinks} />
+            <Navigation navLinks={navLinks} updateShowMobileNav={updateShowMobileNav} />
           </div>
           <div className="flex items-center gap-4">
-            <Burger updateShowMobileNav={updateShowMobileNav} />
+            <Burger burgerBtnState={burgerBtnState} updateBurgerBtnState={updateBurgerBtnState} />
           </div>
         </div>
       </div>
@@ -60,7 +67,7 @@ const AppHeader = () => {
           { hidden: showMobileNav }
         )}
       >
-        <Navigation navLinks={navLinks} />
+        <Navigation navLinks={navLinks} updateShowMobileNav={updateShowMobileNav} />
       </div>
     </header>
   )

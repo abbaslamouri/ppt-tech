@@ -5,10 +5,14 @@ import { ChevronUp } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 
+// ({ updateShowMobileNav }: { updateShowMobileNav: (burgerButtonState: boolean) => void }
+
 const Navigation = ({
   navLinks,
+  updateShowMobileNav,
 }: {
   navLinks: { path: string; label: string; children?: { path: string; label: string }[] }[]
+  updateShowMobileNav: (burgerButtonState: boolean) => void
 }) => {
   const [chevronStates, setChevronStates] = useState<string[]>([])
 
@@ -49,7 +53,12 @@ const Navigation = ({
                 <ul className="">
                   {navLink.children?.map((child, j: number) => (
                     <li className="px-4 py-2 " key={j}>
-                      <Link href={child?.path}>
+                      <Link
+                        href={child?.path}
+                        onClick={() => {
+                          updateShowMobileNav(true)
+                        }}
+                      >
                         <span className="uppercase ">{child?.label}</span>
                       </Link>
                     </li>
@@ -59,7 +68,12 @@ const Navigation = ({
             </li>
           ) : (
             <li className="px-4 py-2 relative" key={i}>
-              <Link href={navLink.path}>
+              <Link
+                href={navLink.path}
+                onClick={() => {
+                  updateShowMobileNav(true)
+                }}
+              >
                 <span className="uppercase text-sm">{navLink.label}</span>
               </Link>
             </li>

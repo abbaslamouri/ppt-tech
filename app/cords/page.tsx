@@ -103,7 +103,7 @@ const CordsPage = () => {
   return (
     <div className="space-y-8">
       <section className="container py-16  min-h-[400px] bg-blend-multiply bg-no-repeat bg-cover">
-        <div className="space-y-4">
+        <div className="space-y-6">
           <div className="flex items-center gap-4">
             <div className="relative w-[300px] h-[50px] ">
               <Image
@@ -125,7 +125,7 @@ const CordsPage = () => {
               <li key={i}>{item}</li>
             ))}
           </ul>
-          <div className="flex items-center justify-evenly gap-16">
+          <div className="flex items-center justify-evenly flex-wrap gap-16">
             <Image
               className="w-auto object-contain h-[16rem]"
               src={powerCordImage}
@@ -143,9 +143,9 @@ const CordsPage = () => {
         {/* </div> */}
       </section>
 
-      <section className="container py-16 space-y-2">
+      <section className="container pt-16 space-y-2">
         <h3 className="text-xl">{cords.powerCordsTableTitle}</h3>
-        <table className="w-full hidden md:table border-collapse border shadow-md p-4 border-gray-200">
+        <table className="w-full hidden lg:table border-collapse border shadow-md p-4 border-gray-200">
           <thead className="bg-primary-20 text-primary-90">
             <tr>
               {Object.keys(cords?.powerCordsTable[0])?.map(
@@ -161,7 +161,7 @@ const CordsPage = () => {
           <tbody>
             {cords?.powerCordsTable?.map((item: any, i: number) => (
               <tr key={i}>
-                <td className="text-left flex flex-col gap-2 px-4 py-2">
+                <td className="text-left flex flex-col gap-2 px-4 py-2 min-w-48">
                   {item.pdf ? (
                     <Link className="text-promary-40 font-bold underline" href={item.pdf} target="_blank">
                       {item.model}
@@ -176,11 +176,29 @@ const CordsPage = () => {
             ))}
           </tbody>
         </table>
+        <div className="lg:hidden">
+          {cords?.powerCordsTable?.map((item: any, i: number) => (
+            <div className="p-4 border border-gray-200 space-y-2" key={i}>
+              <div className="">
+                <Link className="text-promary-40 font-bold underline" href={item.pdf} target="_blank">
+                  {item.model}:
+                </Link>
+              </div>
+              <div>
+                <span className="font-[500]"></span>
+                {item.description}
+              </div>
+              <div>
+                <span className="font-[500]">Application</span>: {item.application}
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
-      <section className="container py-16 space-y-2">
+      <section className="container pt-16 space-y-2">
         <h3 className="text-xl">{cords.controlCordsTableTitle}</h3>
-        <table className="w-full hidden md:table border-collapse border shadow-md p-4 border-gray-200">
+        <table className="w-full hidden lg:table border-collapse border shadow-md p-4 border-gray-200">
           <thead className="bg-primary-20 text-primary-90">
             <tr>
               {Object.keys(cords?.controlCordsTable[0])?.map(
@@ -196,7 +214,7 @@ const CordsPage = () => {
           <tbody>
             {cords?.controlCordsTable?.map((item: any, i: number) => (
               <tr key={i}>
-                <td className="text-left flex flex-col gap-2 px-4 py-2">
+                <td className="text-left flex flex-col gap-2 px-4 py-2 min-w-36">
                   {item.pdf ? (
                     <Link className="text-promary-40 font-bold underline" href={item.pdf} target="_blank">
                       {item.model}
@@ -211,6 +229,24 @@ const CordsPage = () => {
             ))}
           </tbody>
         </table>
+        <div className="lg:hidden">
+          {cords?.controlCordsTable?.map((item: any, i: number) => (
+            <div className="p-4 border border-gray-200 space-y-2" key={i}>
+              <div className="">
+                <Link className="text-promary-40 font-bold underline" href={item.pdf} target="_blank">
+                  {item.model}:
+                </Link>
+              </div>
+              <div>
+                <span className="font-[500]"></span>
+                {item.description}
+              </div>
+              <div>
+                <span className="font-[500]">Application</span>: {item.application}
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   )

@@ -80,7 +80,7 @@ const SlimzPage = () => {
       </section>
 
       <section className="container py-16">
-        <table className="w-full hidden md:table border-collapse border shadow-md p-4 border-gray-200">
+        <table className="w-full hidden lg:table border-collapse border shadow-md p-4 border-gray-200">
           <thead className="bg-primary-20 text-primary-90">
             <tr>
               {Object.keys(slimz?.table[0])?.map(
@@ -110,6 +110,35 @@ const SlimzPage = () => {
             ))}
           </tbody>
         </table>
+        <div className="lg:hidden">
+          {slimz?.table?.map((item: any, i: number) => (
+            <div className="p-4 border border-gray-200 flow-3xs" key={i}>
+              <div className="">
+                <Link className="text-promary-40 font-bold underline" href={item.pdf} target="_blank">
+                  {item.model}
+                </Link>
+              </div>
+              <div>
+                <span className="font-[500]">Input</span>: {item['Input(W)']} W
+              </div>
+              <div>
+                <span className="font-[500]">PPF</span>: {item['PPF(umol/m2/s)']} umol/m<sup>2</sup>/s
+              </div>
+              <div>
+                {' '}
+                <span className="font-[500]">Spectrum</span>: {item['Spectrum']}
+              </div>
+              <div>
+                {' '}
+                <span className="font-[500]">Bars</span>: {item.Bars}
+              </div>
+              <div>
+                {' '}
+                <span className="font-[500]">Dimming</span>: {item.Dimming}
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   )

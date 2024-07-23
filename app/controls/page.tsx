@@ -52,8 +52,8 @@ const ControlsPage = () => {
   return (
     <div className="space-y-8">
       <section className="container py-16  min-h-[400px] bg-blend-multiply bg-no-repeat bg-cover">
-        <div className="space-y-4">
-          <div className="flex items-center gap-4">
+        <div className="space-y-6">
+          <div className="flex items-center gap-4 ">
             <div className="relative w-[300px] h-[50px] ">
               <Image
                 src={headingImage}
@@ -74,7 +74,7 @@ const ControlsPage = () => {
               <li key={i}>{item}</li>
             ))}
           </ul>
-          <div className="flex items-center justify-evenly gap-16">
+          <div className="flex items-center justify-evenly flex-wrap gap-16">
             <Image className="w-auto object-contain h-[16rem]" src={cd3Image} alt="PPF Tech Logo Image" sizes="100%" />
             <Image
               className="w-auto object-contain h-[17.5rem] -translate-y-3"
@@ -87,7 +87,7 @@ const ControlsPage = () => {
       </section>
 
       <section className="container py-16">
-        <table className="w-full hidden md:table border-collapse border shadow-md p-4 border-gray-200">
+        <table className="w-full border-collapse border shadow-md p-4 border-gray-200">
           <thead className="bg-primary-20 text-primary-90">
             <tr>
               <th className="border border-gray-200 px-4 py-2 bg-gray-950 text-gray-100">
@@ -115,7 +115,7 @@ const ControlsPage = () => {
       </section>
 
       <section className="container py-16">
-        <table className="w-full hidden md:table border-collapse border shadow-md p-4 border-gray-200">
+        <table className="w-full border-collapse border shadow-md p-4 border-gray-200">
           <thead className="bg-primary-20 text-primary-90">
             <tr>
               <th className="border border-gray-200 px-4 py-2 bg-gray-950 text-gray-100">
