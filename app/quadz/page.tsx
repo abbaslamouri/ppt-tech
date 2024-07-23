@@ -114,6 +114,7 @@ const QuadzPage = () => {
                     locale={false}
                     rel="noopener noreferrer"
                     target="_blank"
+                    aria-label="Downlod pdf"
                   >
                     {item.model}
                   </Link>
@@ -132,7 +133,14 @@ const QuadzPage = () => {
           {quadz?.table?.map((item: any, i: number) => (
             <div className="p-4 border border-gray-200 flow-3xs" key={i}>
               <div className="">
-                <Link className="text-promary-40 font-bold underline" href={item.pdf} target="_blank">
+                <Link
+                  className="text-promary-40 font-bold underline"
+                  href={item.pdf}
+                  locale={false}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  aria-label="Downlod pdf"
+                >
                   {item.model}
                 </Link>
               </div>
