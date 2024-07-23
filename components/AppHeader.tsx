@@ -37,13 +37,11 @@ const AppHeader = () => {
   const updateShowMobileNav = (state: boolean) => {
     setShowMobileNav(state)
     setBurgerBtnState(false)
-    // console.log('SSSSS', showMobileNav)
   }
 
   const updateBurgerBtnState = (state: boolean) => {
     setBurgerBtnState(state)
     setShowMobileNav(!state)
-    // console.log('SSSSS', showMobileNav)
   }
 
   return (
