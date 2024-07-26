@@ -14,10 +14,10 @@ const Services = () => {
   }
 
   return (
-    <article id="services" className="py-16">
+    <article id="services" className="py-16 ">
       <div className="container space-y-8 ">
-        <div className="grid grid-cols-12 gap-12 items-center ">
-          <div className="col-span-12 lg:col-span-8 space-y-4">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 ">
+          <div className=" space-y-4 ">
             <div className="flow-3xs">
               <h2 className="text-3xl text-center">{services?.title}</h2>
               <p className="text-center">{services?.description}</p>
@@ -32,8 +32,15 @@ const Services = () => {
               </ul>
             </div>
           </div>
-          <div className='col-span-12 lg:col-span-4 border-green"'>
-            <Image className="w-full object-contain" src={servicesImage} alt="PPF Tech Logo Image" sizes="100%" />
+          <div className=' relative w-3/4 h-auto aspect-square block md:flex md:w-1/2 "'>
+            <Image
+              style={{
+                objectFit: 'contain',
+              }}
+              src={servicesImage}
+              alt="PPF Tech Logo Image"
+              sizes="500px"
+            />
           </div>
         </div>
       </div>

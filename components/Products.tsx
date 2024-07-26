@@ -50,7 +50,7 @@ const Products = () => {
             )}
           </div>
         </ul>
-        <div className="grid grid-cols-12">
+        <div className="grid grid-cols-12 gap-8">
           <Link className="col-span-12 lg:col-span-4" href="/quadz">
             <Image className="h-32 w-full object-contain" src={quadzImage} alt="PPF Tech Logo Image" sizes="100%" />
           </Link>

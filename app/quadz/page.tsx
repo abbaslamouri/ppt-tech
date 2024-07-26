@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import heroImage from '@/public/PPF-Tech-HG660-FS3-Angle-Transparent-600.png'

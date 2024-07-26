@@ -27,7 +27,7 @@ const Hero = () => {
       }}
     >
       <div className="container  ">
-        <div className="grid grid-cols-12 gap-10">
+        <div className="flex flex-col md:flex-row">
           <div className=" py-16  space-y-8 col-span-12 lg:col-span-8 ">
             <div className="space-y-1">
               {/* <p className="text-gray-400 uppercase tracking-widest"> {hero?.headline}</p> */}
@@ -61,8 +61,8 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center col-span-12 lg:col-span-4  ">
-            <Image className="w-1/2 lg:w-full object-contain" src={heroImage} alt="PPF Tech Logo Image" sizes="100%" />
+          <div className="flex items-center col-span-12 lg:col-span-4 max-w-[40rem]  ">
+            <Image className=" lg:w-full object-contain" src={heroImage} alt="PPF Tech Logo Image" sizes="100%" />
           </div>
         </div>
       </div>
