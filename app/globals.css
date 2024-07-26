@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --header-height: 4rem;
-    --footer-height: 4rem;
+    --footer-height: 5rem;
 
     --burger-bar-gap: 7px;
     --burger-bar-width: 24px;

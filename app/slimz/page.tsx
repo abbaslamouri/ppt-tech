@@ -22,7 +22,7 @@ const SlimzPage = () => {
       {
         model: 'SL550 PRO FS1',
         'Input(W)': '550',
-        'PPF(umol/m2/s)': '1500',
+        'PPF(umol/m2/s)': '1550',
         Spectrum: 'Full 3.2K',
         Bars: '1',
         Dimming: '0-10V',

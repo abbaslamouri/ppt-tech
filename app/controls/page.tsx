@@ -51,7 +51,7 @@ const ControlsPage = () => {
 
   return (
     <div className="space-y-8">
-      <section className="container py-16  min-h-[400px] bg-blend-multiply bg-no-repeat bg-cover">
+      <section className="container pt-16  min-h-[400px] bg-blend-multiply bg-no-repeat bg-cover">
         <div className="space-y-6">
           <div className="flex items-center gap-4 ">
             <div className="relative w-[300px] h-[50px] ">
@@ -86,7 +86,7 @@ const ControlsPage = () => {
         </div>
       </section>
 
-      <section className="container py-16">
+      <section className="container pt-16">
         <table className="w-full border-collapse border shadow-md p-4 border-gray-200">
           <thead className="bg-primary-20 text-primary-90">
             <tr>
@@ -114,7 +114,7 @@ const ControlsPage = () => {
         </table>
       </section>
 
-      <section className="container py-16">
+      <section className="container pt-4">
         <table className="w-full border-collapse border shadow-md p-4 border-gray-200">
           <thead className="bg-primary-20 text-primary-90">
             <tr>
