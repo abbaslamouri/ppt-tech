@@ -24,7 +24,7 @@ const QuadzPage = () => {
         Spectrum: 'Full 4K',
         Bars: '8',
         Dimming: '0-10V',
-        pdf: '/PPF-Tech-HG940-PRO-FS3-Specifications_R4.0.pdf',
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-HG940-PRO-FS3-Specifications_R4.0.pdf`,
       },
       {
         model: 'HG660 PRO FS3',
@@ -33,7 +33,7 @@ const QuadzPage = () => {
         Spectrum: 'Full 4K',
         Bars: '8',
         Dimming: '0-10V',
-        pdf: '/PPF-Tech-HG660-PRO-FS3-Specifications_R5.0.pdf',
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-HG660-PRO-FS3-Specifications_R5.0.pdf`,
       },
       {
         model: 'HG340 PRO FS1',
@@ -42,7 +42,7 @@ const QuadzPage = () => {
         Spectrum: 'Full 4K',
         Bars: '6',
         Dimming: '0-10V',
-        pdf: '/PPF-Tech-HG340-PRO-FS1-Specifications_R2.0.pdf',
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-HG340-PRO-FS1-Specifications_R2.0.pdf`,
       },
     ],
   }

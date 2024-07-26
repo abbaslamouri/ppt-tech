@@ -18,7 +18,7 @@ const ControlsPage = () => {
       {
         model: 'CD-3',
         list: ['ON/OFF/DIM control device - manual interface', 'Controls up to 60 LED fixtures per channel'],
-        pdf: 'PPF-Tech-CD-3-Specifications_R2.0.pdf',
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-CD-3-Specifications_R2.0.pdf`,
       },
       {
         model: 'CDX-1',
@@ -26,7 +26,7 @@ const ControlsPage = () => {
           'ON/OFF/DIM light control. CO2, temperature, humidity sensing',
           'Controls up to 60 LED fixtures per channel via RJ-M16 conversion cable',
         ],
-        pdf: 'PPF-Tech-CDX-1-Specifications_R1.0.pdf',
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-CDX-1-Specifications_R1.0.pdf`,
       },
     ],
     accessoriesTableTitle: 'Accessories',
@@ -34,17 +34,17 @@ const ControlsPage = () => {
       {
         model: 'PARS-1',
         list: ['Temperature sensor for CDX-1', 'Ongoing measurement of PPF'],
-        pdf: 'PPF-Tech-PARS-1_Specifications_R1.0.pdf',
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-PARS-1_Specifications_R1.0.pdf`,
       },
       {
         model: 'CO2S-1',
         list: ['CO2 sensor for CDX-1', 'Ongoing measurement of carbon dioxide'],
-        pdf: 'PPF-Tech-CO2S-1_Specifications_R1.0.pdf',
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-CO2S-1_Specifications_R1.0.pdf`,
       },
       {
         model: 'TS-1',
         list: ['Temperature sensor for CD-3', 'Provides temperature sensing for a secondary zone'],
-        pdf: 'PPF-Tech-TS-1-Specifications_R1.0.pdf',
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-TS-1-Specifications_R1.0.pdf`,
       },
     ],
   }

@@ -26,7 +26,7 @@ const SlimzPage = () => {
         Spectrum: 'Full 3.2K',
         Bars: '1',
         Dimming: '0-10V',
-        pdf: '/PPF-Tech-SL550-Specifications_R8.0.pdf',
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-SL550-Specifications_R8.0.pdf`,
       },
       {
         model: 'SL500 PRO RB1',
@@ -35,7 +35,7 @@ const SlimzPage = () => {
         Spectrum: 'BR Supplemental',
         Bars: '1',
         Dimming: '0-10V',
-        pdf: '/PPF-Tech-SL500-Specifications_Rev2.0.pdf',
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-SL500-Specifications_Rev2.0.pdf`,
       },
     ],
   }

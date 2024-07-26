@@ -23,7 +23,7 @@ const BarzPage = () => {
         Spectrum: 'Clone 2.2K',
         Bars: '2',
         Dimming: '0-10V',
-        pdf: '/PPF Tech CL24 PRO FS5 Specifications_R4.0.pdf',
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF Tech CL24 PRO FS5 Specifications_R4.0.pdf`,
       },
       {
         model: 'FR20 PRO FS7',
@@ -32,7 +32,7 @@ const BarzPage = () => {
         Spectrum: 'Far red',
         Bars: '2',
         Dimming: '0-10V',
-        pdf: '/PPF Tech FR20 PRO FS7 Specifications_R1.0.pdf',
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF Tech FR20 PRO FS7 Specifications_R1.0.pdf`,
       },
     ],
   }
