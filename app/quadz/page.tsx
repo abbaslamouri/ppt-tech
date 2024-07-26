@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import heroImage from '@/public/PPF-Tech-HG660-FS3-Angle-Transparent-600.png'
@@ -108,16 +110,16 @@ const QuadzPage = () => {
             {quadz?.table?.map((item: any, i: number) => (
               <tr key={i}>
                 <td className="border border-gray-200 px-4 py-2">
-                  <a
+                  <Link
                     className="text-promary-40 font-bold underline"
                     href={item.pdf}
-                    // locale={false}
+                    locale={false}
                     rel="noopener noreferrer"
                     target="_blank"
                     aria-label="Downlod pdf"
                   >
                     {item.model}
-                  </a>
+                  </Link>
                 </td>
                 <td className="border border-gray-200 px-4 py-2">{item['Input(W)']}</td>
                 <td className="border border-gray-200 px-4 py-2">{item['PPF(umol/m2/s)']}</td>

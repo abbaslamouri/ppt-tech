@@ -31,7 +31,7 @@ const Hero = () => {
           <div className=" py-16  space-y-8 col-span-12 lg:col-span-8 ">
             <div className="space-y-1">
               {/* <p className="text-gray-400 uppercase tracking-widest"> {hero?.headline}</p> */}
-              <h1 className="text-5xl text-white max-w-[10ch] leading-[1] font-bold">{hero?.title}</h1>
+              <h1 className="text-5xl text-white max-w-[30ch] leading-[1] font-bold">{hero?.title}</h1>
             </div>
             <div className="">
               <div className="">
