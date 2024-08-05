@@ -102,9 +102,9 @@ const CordsPage = () => {
 
   return (
     <div className="space-y-8">
-      <section className="container py-16  min-h-[400px] bg-blend-multiply bg-no-repeat bg-cover">
+      <section className="container py-4  min-h-[400px] bg-blend-multiply bg-no-repeat bg-cover">
         <div className="space-y-6">
-          <div className="flex items-center gap-4">
+          <div className="flex  flex-wrap items-center gap-4">
             <div className="relative w-[300px] h-[50px] ">
               <Image
                 src={headingImage}
@@ -125,15 +125,15 @@ const CordsPage = () => {
               <li key={i}>{item}</li>
             ))}
           </ul>
-          <div className="flex items-center justify-evenly flex-wrap gap-16">
+          <div className="flex flex-col items-center justify-evenly gap-4 md:flex-row">
             <Image
-              className="w-auto object-contain h-[16rem]"
+              className=" object-contain scale-[.9] "
               src={powerCordImage}
               alt="PPF Tech Logo Image"
               sizes="100%"
             />
             <Image
-              className="w-auto object-contain h-[17.5rem] -translate-y-3 scale-[0.9]"
+              className=" object-contain  3 scale-[0.9]"
               src={controlCordImage}
               alt="PPF Tech Logo Image"
               sizes="100%"
@@ -142,7 +142,7 @@ const CordsPage = () => {
         </div>
       </section>
 
-      <section className="container pt-16 space-y-2">
+      <section className="container space-y-2">
         <h3 className="text-xl">{cords.powerCordsTableTitle}</h3>
         <table className="w-full hidden lg:table border-collapse border shadow-md p-4 border-gray-200">
           <thead className="bg-primary-20 text-primary-90">
@@ -169,8 +169,8 @@ const CordsPage = () => {
                     <span>{item.model}</span>
                   )}
                 </td>
-                <td>{item.description}</td>
-                <td>{item.application}</td>
+                <td className=" px-4 py-2">{item.description}</td>
+                <td className=" px-4 py-2">{item.application}</td>
               </tr>
             ))}
           </tbody>
@@ -195,7 +195,7 @@ const CordsPage = () => {
         </div>
       </section>
 
-      <section className="container pt-16 space-y-2">
+      <section className="container  space-y-2">
         <h3 className="text-xl">{cords.controlCordsTableTitle}</h3>
         <table className="w-full hidden lg:table border-collapse border shadow-md p-4 border-gray-200">
           <thead className="bg-primary-20 text-primary-90">
@@ -222,8 +222,8 @@ const CordsPage = () => {
                     <span>{item.model}</span>
                   )}
                 </td>
-                <td>{item.description}</td>
-                <td>{item.application}</td>
+                <td className=" px-4 py-2">{item.description}</td>
+                <td className=" px-4 py-2">{item.application}</td>
               </tr>
             ))}
           </tbody>

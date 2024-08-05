@@ -47,7 +47,7 @@ const BarzPage = () => {
       >
         <div className="grid grid-cols-2 gap-8">
           <div className="space-y-4 col-span-2 md:col-span-1">
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4">
               <div className="relative w-[200px] h-[50px] ">
                 <Image
                   src={headingImage}

@@ -53,7 +53,7 @@ const ControlsPage = () => {
     <div className="space-y-8">
       <section className="container pt-16  min-h-[400px] bg-blend-multiply bg-no-repeat bg-cover">
         <div className="space-y-6">
-          <div className="flex items-center gap-4 ">
+          <div className="flex  flex-wrap items-center gap-4 ">
             <div className="relative w-[300px] h-[50px] ">
               <Image
                 src={headingImage}
