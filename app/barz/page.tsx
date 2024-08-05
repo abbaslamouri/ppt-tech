@@ -82,7 +82,14 @@ const BarzPage = () => {
                 (item: any, i: number) =>
                   item !== 'pdf' && (
                     <th className="border border-gray-200 px-4 py-2 bg-gray-950 text-gray-100" key={i}>
-                      {item}
+                      {item === 'PPF(umol/m2/s)/bar' ? (
+                        <span>
+                          umol/m<sup>2</sup>/s/bar
+                        </span>
+                      ) : (
+                        <span>{item}</span>
+                      )}
+                      {/* {item} */}
                     </th>
                   )
               )}

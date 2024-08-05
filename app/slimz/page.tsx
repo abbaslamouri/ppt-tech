@@ -50,7 +50,7 @@ const SlimzPage = () => {
       >
         <div className="grid grid-cols-2 items-center gap-8">
           <div className="space-y-4 col-span-2 md:col-span-1">
-            <div className="flex  flex-wrap items-center gap-4">
+            <div className="flex items-center gap-4">
               <div className="relative w-[200px] h-[50px] ">
                 <Image
                   src={headingImage}
@@ -87,7 +87,14 @@ const SlimzPage = () => {
                 (item: any, i: number) =>
                   item !== 'pdf' && (
                     <th className="border border-gray-200 px-4 py-2 bg-gray-950 text-gray-100" key={i}>
-                      {item}
+                      {item === 'PPF(umol/m2/s)' ? (
+                        <span>
+                          umol/m<sup>2</sup>/s
+                        </span>
+                      ) : (
+                        <span>{item}</span>
+                      )}
+                      {/* {item} */}
                     </th>
                   )
               )}
