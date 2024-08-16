@@ -12,9 +12,9 @@ const resend = new Resend(process.env.RESENE_API_KEY)
  * @returns object
  */
 export const sendMail = async (prevState: unknown, formData: FormData): Promise<IServerResponse<{}>> => {
-  console.log('FD', formData)
+  // console.log('FD', formData)
   const parsed = contactFormSchema.safeParse(Object.fromEntries(formData.entries()))
-  console.log('Parsed', parsed)
+  // console.log('Parsed', parsed)
   if (parsed.success === false)
     return {
       status: 'error',
@@ -35,8 +35,8 @@ export const sendMail = async (prevState: unknown, formData: FormData): Promise<
     <p>Date: ${new Date().toLocaleDateString()}</p>
     `
   const { data, error } = await resend.emails.send({
-    from: 'YRL Consulting <support@yrl-tech.com>',
-    to: 'abbaslamouri@yrlus.com',
+    from: 'PPF Tech <support@ppf-tech.com>',
+    to: 'steve@ppf-tech.com',
     subject: 'Email message from PPF Tech ',
     html,
   })
