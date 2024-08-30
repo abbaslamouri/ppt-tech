@@ -21,9 +21,9 @@ const Hero = () => {
   }
   return (
     <article
-      className="  min-h-[400px] bg-gray-600 bg-blend-multiply "
+      className="min-h-[400px]"
       style={{
-        backgroundImage: `url("/PPF-Tech-HG660-Application-1200.jpg")`,
+        backgroundImage: `url("/PPF-Tech-HG660-Application-1200-Dark.jpg")`,
       }}
     >
       <div className="container  ">
