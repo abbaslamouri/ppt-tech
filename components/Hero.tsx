@@ -21,7 +21,7 @@ const Hero = () => {
   }
   return (
     <article
-      className="min-h-[400px]"
+      className="min-h-[400px] bg-no-repeat bg-cover"
       style={{
         backgroundImage: `url("/PPF-Tech-HG660-Application-1200-Dark.jpg")`,
       }}
