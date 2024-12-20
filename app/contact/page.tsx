@@ -16,7 +16,7 @@ import { useSearchParams } from 'next/navigation'
 
 const ContactPage = ({ searchParams }: any) => {
   const { pending } = useFormStatus()
-  console.log(searchParams)
+  // console.log(searchParams)s
   const [state, formAction] = useFormState(sendMail, null)
   const [open, setOpen] = useState(false)
   const [countryName, setCountryName] = useState('')
