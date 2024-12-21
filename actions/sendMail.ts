@@ -4,7 +4,7 @@ import { contactFormSchema, IServerResponse } from '@/types'
 import { redirect } from 'next/navigation'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESENE_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 /**
  * Send mail
@@ -36,7 +36,9 @@ export const sendMail = async (prevState: unknown, formData: FormData): Promise<
     `
   const { data, error } = await resend.emails.send({
     from: 'PPF Tech <support@ppf-tech.com>',
+    // from: "Artelas Quilts <support@yrl-tech.com>",
     to: 'steve@ppf-tech.com',
+    // to:"abbaslamouri@yrlus.com",
     subject: 'Email message from PPF Tech ',
     html,
   })

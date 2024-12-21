@@ -111,7 +111,7 @@ const QuadzPage = () => {
                   <Link
                     className="text-promary-40 font-bold underline"
                     href={item.pdf}
-                    locale={false}
+                    // locale={false}
                     rel="noopener noreferrer"
                     target="_blank"
                     aria-label="Downlod pdf"
@@ -136,7 +136,7 @@ const QuadzPage = () => {
                 <Link
                   className="text-promary-40 font-bold underline"
                   href={item.pdf}
-                  locale={false}
+                  // locale={false}
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label="Downlod pdf"
@@ -166,7 +166,6 @@ const QuadzPage = () => {
           ))}
         </div>
       </section>
-      {/* <Separator /> */}
       <section className="container flex flex-col md:flex-row gap-12 py-16 ">
         <div className="w-full">
           <iframe className="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/pA3wF0ThOCI" />

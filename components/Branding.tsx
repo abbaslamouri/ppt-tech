@@ -10,9 +10,7 @@ const Branding = () => {
       <div className="relative size-full -translate-x-3">
         <Image
           src={PPFLogo}
-          sizes="200px"
-          fill
-          priority
+          width={200}
           style={{
             objectFit: 'contain',
           }}
