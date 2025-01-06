@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const page = () => {
   return (
@@ -14,6 +14,10 @@ const page = () => {
           considered defective under this warranty solely because a small number of separate LED components fail to
           operate when the number of such failed components is less than 10% of the total number of light-emitting
           components which are part of the product. A dated receipt or invoice is required for all warranty claims.
+        </p>
+        <p>
+          Warranties are extended to the original purchaser and are not transferred when reselling products and/or
+          facilities including these products.
         </p>
         <p>
           In the fourth and fifth years of the warranty period, PPF Tech, at its sole discretion, may elect to replace

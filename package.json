@@ -24,13 +24,13 @@
     "react-dom": "19.0.0",
     "resend": "^3.5.0",
     "sharp": "^0.33.5",
-    "tailwind-merge": "^2.5.5",
+    "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.24.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",
-    "@types/node": "^20.17.10",
+    "@types/node": "^20.17.12",
     "@types/react": "19.0.2",
     "@types/react-dom": "19.0.2",
     "eslint": "^8.57.1",
