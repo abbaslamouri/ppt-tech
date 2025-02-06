@@ -1,48 +1,36 @@
 import Image from "next/image"
 import Link from "next/link"
-import heroImage from "@/public/PPF-Tech-HG660-FS3-Angle-Transparent-600.png"
-import headingImage from "@/public/Quadz-Name-Color.png"
+import heroImage from "@/public/UC120 unfolded 2.png"
+import headingImage from "@/public/UPZ-Name-Color.png"
 
 const QuadzPage = () => {
   const quadz = {
-    title: "QUADZ",
-    subTitle: "Indoor grid or racked",
+    title: "UPZ",
+    subTitle: "Under Canopy",
     list: [
-      "Maximized µmol per watt",
-      "Optimized spectrum",
-      "Power eco-link",
-      "Control eco-link",
-      "Wide, uniform light distribution",
-      "Strong light penetration",
-      "5 year warranty",
+      "Long power and control leads provide layout flexibility",
+      "Folding legs included for 5” or 10” height selection",
+      "Control link - daisy chain up to 80 fixtures per circuit",
+      "Glass lens for long-lasting seal and transmittance ",
     ],
     table: [
       {
-        model: "HG940 PRO FS3",
-        "Input(W)": "940",
-        "PPF(umol/m2/s)": "2,570",
-        Spectrum: "Full 4K",
-        Bars: "8",
+        model: "UC120 PRO FS6",
+        "Input(W)": "120",
+        "PPF(umol/m2/s)": "340",
+        Spectrum: "Red/Far Red Weighted",
+        Bars: "1",
         Dimming: "0-10V",
-        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-HG940-PRO-FS3-Specifications_R4.0.pdf`,
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-UC120-PRO-FS6-Specifications_Rev3.0.pdf`,
       },
       {
-        model: "HG660 PRO FS3",
-        "Input(W)": "660",
-        "PPF(umol/m2/s)": "1820",
-        Spectrum: "Full 4K",
-        Bars: "8",
+        model: "UC145 PRO FS6",
+        "Input(W)": "145",
+        "PPF(umol/m2/s)": "410",
+        Spectrum: "Red/Far Red Weighted",
+        Bars: "1",
         Dimming: "0-10V",
-        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-HG660-PRO-FS3-Specifications_R5.0.pdf`,
-      },
-      {
-        model: "HG340 PRO FS1",
-        "Input(W)": "340",
-        "PPF(umol/m2/s)": "885",
-        Spectrum: "Full 4K",
-        Bars: "6",
-        Dimming: "0-10V",
-        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-HG340-PRO-FS1-Specifications_R2.0.pdf`,
+        pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF-Tech-UC145-PRO-FS6-Specifications_R3.0.pdf`,
       },
     ],
   }
@@ -52,13 +40,13 @@ const QuadzPage = () => {
       <section
         className="container py-16  min-h-[400px] bg-gray-600 bg-blend-multiply bg-no-repeat bg-cover"
         style={{
-          backgroundImage: `url("/PPF-Tech-HG660-Application-1200.jpg")`,
+          backgroundImage: `url("/Undercanopy long_250202.jpg")`,
         }}
       >
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 gap-8">
           <div className="space-y-4 col-span-2 md:col-span-1">
             <div className="flex flex-wrap items-center gap-4">
-              <div className="relative w-[200px] h-[50px]">
+              <div className="relative w-[200px] h-[50px] ">
                 <Image
                   src={headingImage}
                   sizes="200px"
@@ -78,7 +66,7 @@ const QuadzPage = () => {
               ))}
             </ul>
           </div>
-          <div className="flex items-center max-w-[500px] col-span-2 md:col-span-1">
+          <div className="flex items-center max-w-[500px] col-span-2 md:col-span-1  ">
             <Image className="w-full object-contain" src={heroImage} alt="PPF Tech Logo Image" sizes="100%" />
           </div>
         </div>
@@ -164,14 +152,6 @@ const QuadzPage = () => {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-      <section className="container flex flex-col md:flex-row gap-12 py-16 ">
-        <div className="w-full">
-          <iframe className="w-full aspect-video" src="https://www.youtube-nocookie.com/embed/pA3wF0ThOCI" />
-        </div>
-        <div className="w-full">
-          <iframe className="w-full aspect-video" src=" https://www.youtube-nocookie.com/embed/jK0cvWp6SbU" />
         </div>
       </section>
     </div>

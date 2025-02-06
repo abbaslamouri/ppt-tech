@@ -1,37 +1,37 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import heroImage from '@/public/CL24-PRO-FS3-PIC2.webp'
-import headingImage from '@/public/Barz-Name-Color.png'
+import Image from "next/image"
+import Link from "next/link"
+import heroImage from "@/public/CL24-PRO-FS3-PIC2.webp"
+import headingImage from "@/public/Barz-Name-Color.png"
 
 const BarzPage = () => {
   const barz = {
-    title: 'BARZ',
-    subTitle: 'Propagation',
+    title: "BARZ",
+    subTitle: "Propagation and Far Red",
     list: [
-      'Maximized µmol per watt',
-      'Spectrally tailored fro specific plant response',
-      'Power eco-link',
-      'Even distribution',
-      'Quick install',
-      '5 year warranty',
+      "Maximized µmol per watt",
+      "Spectrally tailored for specific plant response",
+      "Power eco-link",
+      "Even distribution",
+      "Quick install",
+      "5 year warranty",
     ],
     table: [
       {
-        model: 'CL24 PRO FS5',
-        'Input(W)/bar': '24',
-        'PPF(umol/m2/s)/bar': '65',
-        Spectrum: 'Clone 2.2K',
-        Bars: '2',
-        Dimming: '0-10V',
+        model: "CL24 PRO FS5",
+        "Input(W)/bar": "24",
+        "PPF(umol/m2/s)/bar": "65",
+        Spectrum: "Clone 2.2K",
+        Bars: "2",
+        Dimming: "0-10V",
         pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF Tech CL24 PRO FS5 Specifications_R4.0.pdf`,
       },
       {
-        model: 'FR20 PRO FS7',
-        'Input(W)/bar': '20',
-        'PPF(umol/m2/s)/bar': '58',
-        Spectrum: 'Far red',
-        Bars: '2',
-        Dimming: '0-10V',
+        model: "FR20 PRO FS7",
+        "Input(W)/bar": "20",
+        "PPF(umol/m2/s)/bar": "58",
+        Spectrum: "Far red",
+        Bars: "2",
+        Dimming: "0-10V",
         pdf: `${process.env.NEXT_PUBLIC_S3_BUCKET_HOSTNAME}/PPF Tech FR20 PRO FS7 Specifications_R1.0.pdf`,
       },
     ],
@@ -55,7 +55,7 @@ const BarzPage = () => {
                   fill
                   priority
                   style={{
-                    objectFit: 'contain',
+                    objectFit: "contain",
                   }}
                   alt="PPF Tech Logo Image"
                 />
@@ -80,9 +80,9 @@ const BarzPage = () => {
             <tr>
               {Object.keys(barz?.table[0])?.map(
                 (item: any, i: number) =>
-                  item !== 'pdf' && (
+                  item !== "pdf" && (
                     <th className="border border-gray-200 px-4 py-2 bg-gray-950 text-gray-100" key={i}>
-                      {item === 'PPF(umol/m2/s)/bar' ? (
+                      {item === "PPF(umol/m2/s)/bar" ? (
                         <span>
                           umol/m<sup>2</sup>/s/bar
                         </span>
@@ -103,9 +103,9 @@ const BarzPage = () => {
                     {item.model}
                   </Link>
                 </td>
-                <td className="border border-gray-200 px-4 py-2">{item['Input(W)/bar']}</td>
-                <td className="border border-gray-200 px-4 py-2">{item['PPF(umol/m2/s)/bar']}</td>
-                <td className="border border-gray-200 px-4 py-2">{item['Spectrum']}</td>
+                <td className="border border-gray-200 px-4 py-2">{item["Input(W)/bar"]}</td>
+                <td className="border border-gray-200 px-4 py-2">{item["PPF(umol/m2/s)/bar"]}</td>
+                <td className="border border-gray-200 px-4 py-2">{item["Spectrum"]}</td>
                 <td className="border border-gray-200 px-4 py-2">{item.Bars}</td>
                 <td className="border border-gray-200 px-4 py-2">{item.Dimming}</td>
               </tr>
@@ -121,21 +121,21 @@ const BarzPage = () => {
                 </Link>
               </div>
               <div>
-                <span className="font-[500]">Input</span>: {item['Input(W)/bar']} W
+                <span className="font-[500]">Input</span>: {item["Input(W)/bar"]} W
               </div>
               <div>
-                <span className="font-[500]">PPF</span>: {item['PPF(umol/m2/s)/bar']} umol/m<sup>2</sup>/s
+                <span className="font-[500]">PPF</span>: {item["PPF(umol/m2/s)/bar"]} umol/m<sup>2</sup>/s
               </div>
               <div>
-                {' '}
-                <span className="font-[500]">Spectrum</span>: {item['Spectrum']}
+                {" "}
+                <span className="font-[500]">Spectrum</span>: {item["Spectrum"]}
               </div>
               <div>
-                {' '}
+                {" "}
                 <span className="font-[500]">Bars</span>: {item.Bars}
               </div>
               <div>
-                {' '}
+                {" "}
                 <span className="font-[500]">Dimming</span>: {item.Dimming}
               </div>
             </div>
